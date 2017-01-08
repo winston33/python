@@ -9,16 +9,13 @@ class Application:
     def __init__(self):
         binary = FirefoxBinary(r'c:\Program Files (x86)\Mozilla Firefox\firefox.exe')
         self.wd = WebDriver(firefox_binary=binary)
-        self.wd.implicitly_wait(20)
+        self.wd.implicitly_wait(60)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
 
     def open_home_page(self):
         wd = self.wd
         wd.get("http://localhost:8070/addressbook/")
-
-
-
 
     def destroy(self):
         wd = self.wd

@@ -18,6 +18,11 @@ class GroupHelper:
         wd.find_element_by_name("group_footer").send_keys(group.footer)
         wd.find_element_by_name("submit").click()
 
+    def delete_first(self):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[type='checkbox']").click()
+        wd.find_element_by_name("delete").click()
+
     def open_group_page(self):
         wd = self.app.wd
         wd.find_element_by_css_selector("a[href='group.php']").click()
