@@ -17,7 +17,7 @@ class test_add_group(unittest.TestCase):
     def setUp(self):
         binary = FirefoxBinary(r'c:\Program Files (x86)\Mozilla Firefox\firefox.exe')
         self.wd = WebDriver(firefox_binary=binary)
-        self.wd.implicitly_wait(100)
+        self.wd.implicitly_wait(20)
     
     def test_test_add_group(self):
         success = True
